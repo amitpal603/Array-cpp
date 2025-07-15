@@ -9,8 +9,10 @@ void display(int arr[],int size){
     cout<<endl; 
 }
 
-int InsertEle (int arr[],int size,int index,int ele) {
-    
+int InsertEle (int arr[],int size,int index,int ele,int cap) {
+    if(size >= cap){
+        return 1
+    }
     
      for (int i = size-1; i >= index; i--)
      {
@@ -26,7 +28,7 @@ int main() {
     int size = 10;
     int ele = 45,index = 3;
     display(arr,size);
-    InsertEle(arr,size,index,ele);
+    InsertEle(arr,size,index,ele,10);
     size +=1;
     display(arr,size);
 }
